@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(157, 207, 223);
+}
+
+*{ 
+    margin: 0 auto;
+}
+#k{text-align: center;
+    width: 100px height:100px;}
+
+#header {
+    text-align:center;
+    font-family: 'Song Myung', serif;
+    font-style:bold;
+    font-size:100px;
+    text-shadow: 2px 2px 2px gray;
+    color:linen;}
+
+#kk{text-align: center;}
+#alba{
+    
+    text-align:center;
+    font-family: 'Song Myung', serif;
+    font-style:bold;
+    font-size:100px;
+    text-shadow: 2px 2px 2px gray;
+    color:linen;
