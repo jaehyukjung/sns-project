@@ -12,7 +12,7 @@ body {
     text-align:center;
     font-family: 'Song Myung', serif;
     font-style:bold;
-    font-size:100px;
+    font-size:700px;
     text-shadow: 2px 2px 2px gray;
     color:linen;}
 
@@ -24,4 +24,12 @@ body {
     font-style:bold;
     font-size:100px;
     text-shadow: 2px 2px 2px gray;
-    color:linen;
+    color:linen;}
+
+#minjuJang{
+    text-align:center;
+    font-family: 'Song Myung', serif;
+    font-style:bold;
+    font-size:40px;
+    text-shadow: 2px 2px 2px gray;
+    color:linen;}
