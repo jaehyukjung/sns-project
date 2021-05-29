@@ -17,20 +17,21 @@
         </h4>
     </div>
 
-    <h1>글 목록</h1>
+    <div id="minjuJang">
+        <h2><a href="{%url 'new'%}">글쓰기</a></h2>
+    </div>
 
+    <div id="minjuJang">글목록</div>
+
+    <br><br>
     <div>
         {% for post in posts %}
         <div>
-            <h3>{{post.title}}</h3>
-            {{post.writer}}
-            {{post.summary}}
-            <br>
+            <h5>{{post.title}}</h5>
+            {{post.writer}}<br>
+            {{post.summary}}<br>
+            <a href= "{%url 'detail' post.id %}">..자세히</a>
         </div>
         {%endfor%}
-    </div>
-    <div id="minjuJang">
-        <h2><a href="{%url 'new'%}">글쓰기</a></h2>
-        <h1>글 목록</h1>
     </div>
 {% endblock %}
