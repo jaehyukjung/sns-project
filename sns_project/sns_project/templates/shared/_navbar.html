@@ -7,17 +7,31 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'main' %}">Home</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'main:main' %}">Home</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'first' %}">first</a>
+            <a class="nav-link" href="{% url 'main:first' %}">first</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'second' %}">second</a> 
+            <a class="nav-link" href="{% url 'main:second' %}">second</a> 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'third' %}">third</a>
+            <a class="nav-link" href="{% url 'main:third' %}">third</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Account
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {% if user.is_authenticated %}
+              <li><a class="dropdown-item" href="{% url 'users:mypage' %}">Mypage</a></li>
+              <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout </a></li>
+              {% else %}
+              <li><a class="dropdown-item" href="{%url 'account_login'%}">Login</a></li>
+              <li><a class="dropdown-item" href="{%url 'account_signup'%}">Signup</a></li>
+              {% endif %}
+            </ul>
           </li>
         </ul>
       </div>

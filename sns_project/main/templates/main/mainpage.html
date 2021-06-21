@@ -18,9 +18,9 @@
     </div>
 
     <div id="minjuJang">
-        <h2><a href="{%url 'new'%}">글쓰기</a></h2>
+        <h2><a href="{%url 'main:new'%}">글쓰기</a></h2>
     </div>
-
+    {% if user.is_authenticated %}
     <div id="minjuJang">글목록</div>
 
     <br><br>
@@ -30,8 +30,13 @@
             <h5>{{post.title}}</h5>
             {{post.writer}}<br>
             {{post.summary}}<br>
-            <a href= "{%url 'detail' post.id %}">..자세히</a>
+            <a href= "{%url 'main:detail' post.id %}">..자세히</a>
         </div>
         {%endfor%}
     </div>
+    {% else%}
+    <h3>로그인 후 이용가능</h3>
+    <a href="{% url 'account_login'%}" class="btn btn-warning">로그인</a>
+    <a href="{% url 'account_signup'%}" class="btn btn-warning">회원가입</a>
+    {%endif%}
 {% endblock %}
