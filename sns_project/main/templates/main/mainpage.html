@@ -5,9 +5,9 @@
 {% block content %}
     <br><br><br><br><br><br>
     <div>
-        <h1 id = 'header'>안녕하세요. 정재혁입니다.</h1>
+        <h1 id = "header">안녕하세요. 정재혁입니다.</h1>
         <br>
-        <h4 id= 'minjuJang'>
+        <h4 id= "minjuJang">
             <br><br><br>
             > <strong>third</strong>자기소개 페이지 넘어가기 ★
             <br><br><br>
@@ -35,8 +35,8 @@
         {%endfor%}
     </div>
     {% else%}
-    <h3>로그인 후 이용가능</h3>
-    <a href="{% url 'account_login'%}" class="btn btn-warning">로그인</a>
-    <a href="{% url 'account_signup'%}" class="btn btn-warning">회원가입</a>
+        <h3>로그인 후 이용가능</h3>
+        <a href="{% url 'account_login'%}" class="btn btn-warning">로그인</a>
+        <a href="{% url 'account_signup'%}" class="btn btn-warning">회원가입</a>
     {%endif%}
 {% endblock %}

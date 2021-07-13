@@ -6,7 +6,7 @@ header {
     text-align:center;
     font-family: 'Song Myung', serif;
     font-style:bold;
-    font-size:30px;
+    font-size:20px;
     text-shadow: 2px 2px 2px gray;
     color:linen;
 }
@@ -28,7 +28,7 @@ h3 {
 }
 table {
     background-color: rgb(156, 223, 250);
-    width: 500px;
+    width: 50px;
     font-size: 20px;
     margin: 20px;
     padding: 20px;
