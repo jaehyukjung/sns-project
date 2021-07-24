@@ -5,41 +5,21 @@
 {% block content %}
     <br><br><br><br><br><br>
     <div>
-        <h1 id = "header">안녕하세요. 정재혁입니다.</h1>
+        <h1 id = "minjuJang">안녕하세요. 정재혁입니다.</h1>
         <br>
         <h4 id= "minjuJang">
             <br><br><br>
-            > <strong>third</strong>자기소개 페이지 넘어가기 ★
+            > <strong>first</strong>자기소개 페이지 넘어가기 ★
             <br><br><br>
-            > <strong>first</strong>어릴적 사진 보기 ★
+            > <strong>second</strong>어릴적 사진 보기 ★
             <br><br><br>
-            > <strong>second</strong>경력 모아보기 ★
+            > <strong>third</strong>경력 모아보기 ★
         </h4>
     </div>
 
     <div id="minjuJang">
         <h2><a href="{%url 'main:new'%}">글쓰기</a></h2>
     </div>
-    {% if user.is_authenticated %}
-    <div id="minjuJang">글목록</div>
-
-    <br><br>
-    <div>
-        {% for post in posts %}
-        <div>
-            <h5>{{post.title}}</h5>
-            {{ post.writer }}<br>
-            {{post.summary}}<br>
-            <a href= "{%url 'main:detail' post.id %}">..자세히</a>
-        </div>
-        {%endfor%}
-    </div>
-    {% else%}
-        <h3>로그인 후 이용가능</h3>
-        <a href="{% url 'account_login'%}" class="btn btn-warning">로그인</a>
-        <a href="{% url 'account_signup'%}" class="btn btn-warning">회원가입</a>
-    {%endif%}
-
 
     <div class="container">
         {% if user.is_authenticated %}

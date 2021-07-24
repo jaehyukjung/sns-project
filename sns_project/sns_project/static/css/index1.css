@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(157, 207, 223);
+    background-color: rgb(138, 219, 181);
 }
 *{text-align: center;}
 header {
@@ -18,7 +18,7 @@ h1 {
     text-align: center;
 }
 h2 {
-    text-align: right;
+    text-align: center;
 }
 #main{
     font-family: '맑은 고딕';
